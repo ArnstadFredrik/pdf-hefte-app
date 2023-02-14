@@ -1,6 +1,17 @@
 module.exports = {
   packagerConfig: {},
   rebuildConfig: {},
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'Fredrik Arnstad',
+          name: 'pdf-hefte-app'
+        },
+        prerelease: true
+    },
+  ],
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
