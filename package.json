@@ -1,7 +1,7 @@
 {
   "name": "PDF-Hefte",
   "productName": "PDF-Hefte",
-  "version": "0.1.0",
+  "version": "0.0.0-dev",
   "description": "Program for å lage hefte formaterte pdf.",
   "main": "main.js",
   "scripts": {

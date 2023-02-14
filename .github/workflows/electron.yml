@@ -5,9 +5,9 @@ name: Electron
 
 on:
   push:
+    branches: [ "main" ]
     tags:
-    - '*'
-
+      - '*'
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
