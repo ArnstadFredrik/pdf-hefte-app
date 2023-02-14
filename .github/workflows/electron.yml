@@ -10,9 +10,9 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  make:
 
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
 
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
@@ -21,6 +21,7 @@ jobs:
 
     strategy:
       matrix:
+        os: [windows-latest]
         node-version: [18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
@@ -36,8 +37,8 @@ jobs:
     - run: npm run electron:make
 #    - run: npm run build --if-present
 #    - run: npm test
-    - name: Commit
-      uses: stefanzweifel/git-auto-commit-action@v4
+    - uses: ncipollo/release-action@v1
       with:
-        commit_message: "Electron Make"
+        artifacts: "*.exe"
+
 
