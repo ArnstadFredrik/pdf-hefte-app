@@ -1,0 +1,50 @@
+{
+  "name": "forge-pdf",
+  "productName": "forge-pdf",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": "main.js",
+  "scripts": {
+    "svelte:start": "http-server ./dist/ --cors -o -c-1 --proxy",
+    "svelte:build": "webpack --mode production",
+    "svelte:dev": "webpack serve",
+    "electron:start": "electron-forge start",
+    "electron:package": "electron-forge package",
+    "electron:make": "electron-forge make",
+    "electron:publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": {
+    "name": "Fredrik Arnstad",
+    "email": "fredrik.arnstad@icloud.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "pdf-book": "^0.0.10",
+    "svelte": "^3.55.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.20.2",
+    "@electron-forge/cli": "^6.0.5",
+    "@electron-forge/maker-deb": "^6.0.5",
+    "@electron-forge/maker-rpm": "^6.0.5",
+    "@electron-forge/maker-squirrel": "^6.0.5",
+    "@electron-forge/maker-zip": "^6.0.5",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "dotenv-webpack": "^8.0.1",
+    "electron": "23.0.0",
+    "electron-winstaller": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.2",
+    "svelte-loader": "^3.1.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
