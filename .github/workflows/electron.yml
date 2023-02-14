@@ -28,12 +28,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: get-npm-version
-      id: version
-      uses: martinbeentjes/npm-get-version-action@main
+    - name: Package.json info
+      uses: rexdefuror/read-package-json@v1.0.5
     - uses: ncipollo/release-action@v1
       with:
-        tag: ${{ steps.version.outputs.version }}
+        tag: ${{ env.PACKAGE_VERSION }}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
