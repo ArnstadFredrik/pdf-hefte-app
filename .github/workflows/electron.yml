@@ -14,6 +14,11 @@ jobs:
 
     runs-on: windows-latest
 
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+
     strategy:
       matrix:
         node-version: [18.x]
@@ -32,7 +37,7 @@ jobs:
 #    - run: npm run build --if-present
 #    - run: npm test
     - name: Commit
-      uses: stefanzweifel/git-auto-commit-action@v4.13.1
+      uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: "Electron Make"
 
