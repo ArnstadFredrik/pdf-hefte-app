@@ -37,6 +37,7 @@ jobs:
       run: echo "The version key in your json is ${{steps.version.outputs.version}}"
 
     - uses: ncipollo/release-action@v1
+      width:
         tag: ${{ steps.version.outputs.version }}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
