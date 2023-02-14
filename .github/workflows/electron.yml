@@ -32,7 +32,7 @@ jobs:
       uses: rexdefuror/read-package-json@v1.0.5
     - uses: ncipollo/release-action@v1
       with:
-        tag: ${{ env.PACKAGE_VERSION }}
+        tag: 'v${{ env.PACKAGE_VERSION}}'
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
