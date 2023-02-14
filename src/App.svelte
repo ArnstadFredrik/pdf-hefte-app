@@ -5,7 +5,8 @@
 
   let filePaths = []
   $: dragClass = 'noDragDrop'
-  let binding = ''
+  let binding = 'short-edge'
+  $: console.log({binding})
 
   const handleTitle = () => {
     console.log(titleField)
@@ -62,9 +63,9 @@
        class={dragClass}>
 
   <div class="header grid center gap-1">
-    <h1>PDF Hefte</h1>
+    <h1>PDF-Hefte</h1>
     {#if filePaths.length === 0}
-      <Options on:select={handleBinding}/>
+      <Options bind:group={binding} on:select={handleBinding}/>
       <FilePicker on:click={handleOpenFile}/>
     {:else}
       <ResultView on:reset={handleReset} filePaths={filePaths}/>

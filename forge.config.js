@@ -4,11 +4,7 @@ module.exports = {
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: {
-        authors: 'Fredrik Arnstad',
-        exe: `PDF-Hefte.exe`,
-        name: 'PDF-Hefte',
-      },
+      config: {},
     },
     {
       name: '@electron-forge/maker-zip',
