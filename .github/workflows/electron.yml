@@ -28,14 +28,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: version
-      uses: polyseam/get-version-from-package-json@v.1.0.0
-      id: get-version-from-package-json
-      with:
-        path-to-file: './package.json'
-    - name: print-version
-      run: echo "The version key in your json is ${{steps.version.outputs.version}}"
-
+    - name: get-npm-version
+      id: version
+      uses: martinbeentjes/npm-get-version-action@main
     - uses: ncipollo/release-action@v1
       with:
         tag: ${{ steps.version.outputs.version }}
