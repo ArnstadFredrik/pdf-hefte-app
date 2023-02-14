@@ -35,10 +35,8 @@ jobs:
     - run: npm install
     - run: npm run svelte:build
     - run: npm run electron:make
+    - run: npm run electron:publish
 #    - run: npm run build --if-present
 #    - run: npm test
-    - uses: ncipollo/release-action@v1
-      with:
-        artifacts: "*.exe"
 
 
