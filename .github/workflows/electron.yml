@@ -6,8 +6,6 @@ name: Electron
 on:
   push:
     branches: [ "main" ]
-    tags:
-      - '*'
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -30,7 +28,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: version
+      uses: polyseam/get-version-from-package-json@v.1.0.0
+      id: get-version-from-package-json
+      with:
+        path-to-file: './package.json'
+    - name: print-version
+      run: echo "The version key in your json is ${{steps.version.outputs.version}}"
+
     - uses: ncipollo/release-action@v1
+      tag: ${{ steps.version.outputs.version }}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
