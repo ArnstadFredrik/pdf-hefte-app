@@ -19,7 +19,7 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           tag: 'v${{ env.PACKAGE_VERSION}}'
-          allowUpdates: true
+          allowUpdates: false
           prerelease: false
           draft: false
           removeArtifacts: true
