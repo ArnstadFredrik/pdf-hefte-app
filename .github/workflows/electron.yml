@@ -21,7 +21,7 @@ jobs:
       uses: rexdefuror/read-package-json@v1.0.5
     - uses: ncipollo/release-action@v1
       with:
-        tag: '${{ env.PACKAGE_VERSION}}'
+        tag: 'v${{ env.PACKAGE_VERSION}}'
         allowUpdates: true
 
   make:

@@ -10,7 +10,7 @@ module.exports = {
           name: 'pdf-hefte-app',
           tagPrefix: '',
         },
-        prerelease: true,
+        prerelease: false,
       },
     },
   ],
