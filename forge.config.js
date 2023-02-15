@@ -8,9 +8,9 @@ module.exports = {
         repository: {
           owner: 'Fredrik Arnstad',
           name: 'pdf-hefte-app',
-          tagPrefix: '',
+          tagPrefix: 'v',
         },
-        prerelease: false,
+        prerelease: true,
       },
     },
   ],

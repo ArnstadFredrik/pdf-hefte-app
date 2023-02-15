@@ -23,6 +23,7 @@ jobs:
   #      with:
   #        tag: 'v${{ env.PACKAGE_VERSION}}'
   #        allowUpdates: true
+  #        prerelease: true
 
   make:
     #needs: release
