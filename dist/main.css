@@ -1,3 +1,6 @@
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/fonts.css ***!
+  \*****************************************************************/
 @font-face {
     font-family: 'Roboto';
     font-weight: 100;
@@ -77,6 +80,9 @@
     src: url(3b32ce5e270ad6bb81f1.woff) format(woff);
 }
 
+/*!****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/main.css ***!
+  \****************************************************************/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document

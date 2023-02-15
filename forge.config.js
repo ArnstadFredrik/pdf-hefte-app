@@ -1,5 +1,7 @@
 module.exports = {
-  packagerConfig: {},
+  packagerConfig: {
+    icon: './images/icons/icon'
+  },
   rebuildConfig: {},
   publishers: [
     {
@@ -17,15 +19,25 @@ module.exports = {
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: {},
+      config: {
+        iconUrl: './images/icons/icon.ico',
+      },
     },
     {
       name: '@electron-forge/maker-zip',
       platforms: ['darwin'],
+      config: {
+        icon: './images/icons/icon.icns',
+      },
     },
     {
       name: '@electron-forge/maker-deb',
-      config: {},
+      config: {
+        options: {
+          icon: './images/icons/icon.png'
+        }
+
+      },
     },
     {
       name: '@electron-forge/maker-rpm',

@@ -1,10 +1,11 @@
 {
   "name": "PDF-Hefte",
   "productName": "PDF-Hefte",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Program for å lage hefte formaterte pdf.",
   "main": "main.js",
   "scripts": {
+    "icon": "pwa-asset-generator --type png --opaque false --icon-only images/icons/icon.png images/icons",
     "dev": "concurrently 'yarn svelte:watch' 'yarn electron:start'",
     "svelte:start": "http-server ./dist/ --cors -o -c-1 --proxy",
     "svelte:build": "webpack --mode production",
@@ -24,6 +25,7 @@
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
     "pdf-book": "^0.0.10",
+    "pwa-icon-generator": "^1.1.4",
     "svelte": "^3.55.1"
   },
   "devDependencies": {
