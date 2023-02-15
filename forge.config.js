@@ -4,7 +4,12 @@ module.exports = {
   publishers: [
     {
       name: '@electron-forge/publisher-github',
-      config: {},
+      config: {
+        repository: {
+          name: 'pdf-hefte-app',
+          owner: 'Fredrik Arnstad
+        },
+      },
       tagPrefix: '',
       prerelease: true,
       },
