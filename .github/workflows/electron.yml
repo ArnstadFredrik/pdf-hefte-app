@@ -46,7 +46,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+          cache: 'npm'
       - run: npm install
       - run: npm run svelte:build
         #    - run: npm run electron:make
