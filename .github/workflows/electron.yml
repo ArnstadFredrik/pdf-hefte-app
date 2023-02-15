@@ -11,22 +11,23 @@ env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
-  #  release:
-  #    runs-on: ubuntu-latest
-  #    permissions:
-  #      contents: write
-  #    steps:
-  #    - uses: actions/checkout@v3
-  #    - name: Package.json info
-  #      uses: rexdefuror/read-package-json@v1.0.5
-  #    - uses: ncipollo/release-action@v1
-  #      with:
-  #        tag: 'v${{ env.PACKAGE_VERSION}}'
-  #        allowUpdates: true
-  #        prerelease: true
+    release:
+      runs-on: ubuntu-latest
+      permissions:
+        contents: write
+      steps:
+      - uses: actions/checkout@v3
+      - name: Package.json info
+        uses: rexdefuror/read-package-json@v1.0.5
+      - uses: ncipollo/release-action@v1
+        with:
+          tag: 'v${{ env.PACKAGE_VERSION}}'
+          allowUpdates: true
+          prerelease: false
+          draft: true
 
   make:
-    #needs: release
+    needs: release
     runs-on: ${{ matrix.os }}
 
     permissions:
