@@ -1,8 +1,6 @@
 # PDF Hefte
 
-<div styles="width: 100%; display: grid; align-items:center;">
 ![Icon](./images/icons/icon-small.png)
-</div>
 
 Electron app for formatting PDFs as booklets.
 
