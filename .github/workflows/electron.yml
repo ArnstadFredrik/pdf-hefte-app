@@ -25,6 +25,7 @@ jobs:
           #allowUpdates: true
 
   make:
+    needs: release
     runs-on: ${{ matrix.os }}
 
     permissions:
