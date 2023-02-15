@@ -1,6 +1,8 @@
 # PDF-Hefte
 
-![UI Preview](./images/ui_preview.png)
+![Icon](./images/icons/icon-small.png)
+
+![UI Preview](./images/ui_preview_small.png)
 
 ## Windows
 `PDF-Hefte-*.Setup.exe`
