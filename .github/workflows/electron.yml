@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      steps:
-        - uses: actions/checkout@v3
+    steps:
+      - uses: actions/checkout@v3
       - name: Package.json info
         uses: rexdefuror/read-package-json@v1.0.5
       - uses: ncipollo/release-action@v1
