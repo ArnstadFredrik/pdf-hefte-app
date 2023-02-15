@@ -23,6 +23,7 @@ jobs:
           prerelease: false
           draft: false
           removeArtifacts: true
+          bodyFile: 'release.md'
 
   make:
     needs: release
