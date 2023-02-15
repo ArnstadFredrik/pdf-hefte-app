@@ -7,7 +7,7 @@ module.exports = {
       config: {
         repository: {
           owner: 'ArnstadFredrik',
-          name: 'https://github.com/ArnstadFredrik/pdf-hefte-app',
+          name: 'pdf-hefte-app',
           tagPrefix: 'v',
         },
         prerelease: false,
