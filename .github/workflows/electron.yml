@@ -22,6 +22,7 @@ jobs:
           allowUpdates: true
           prerelease: false
           draft: false
+          removeArtifacts: true
 
   make:
     needs: release
