@@ -21,7 +21,7 @@ jobs:
           tag: 'v${{ env.PACKAGE_VERSION}}'
           allowUpdates: true
           prerelease: false
-          draft: true
+          draft: false
 
   make:
     needs: release
