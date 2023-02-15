@@ -11,28 +11,36 @@ env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
-  make:
-
-    runs-on: ${{ matrix.os }}
-
+  release:
+    runs-on: ubuntu-latest
     permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the
-      # added or changed files to the repository.
       contents: write
-
-    strategy:
-      matrix:
-        os: [windows-latest]
-        node-version: [18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
     - uses: actions/checkout@v3
     - name: Package.json info
       uses: rexdefuror/read-package-json@v1.0.5
     - uses: ncipollo/release-action@v1
       with:
-        tag: 'v${{ env.PACKAGE_VERSION}}'
+        tag: '${{ env.PACKAGE_VERSION}}'
+
+  make:
+    runs-on: ${{ matrix.os }}
+
+    permissions:
+      contents: write
+
+    strategy:
+      matrix:
+        os: [windows-latest]
+        node-version: [18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+      # - name: Package.json info
+      #   uses: rexdefuror/read-package-json@v1.0.5
+      # - uses: ncipollo/release-action@v1
+      #   with:
+      #     tag: 'v${{ env.PACKAGE_VERSION}}'
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
